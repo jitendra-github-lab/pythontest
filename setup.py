@@ -7,7 +7,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 
 def req_parse(filename: str) -> list[str]:
-    return TextFile(filename=str(Path(__file__).with_name("requirements.txt"))).readlines()
+    return TextFile(filename=str(Path(__file__).with_name(filename))).readlines()
 
 
 REQUIRED = req_parse("requirements.txt")
