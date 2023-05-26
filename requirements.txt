@@ -1,1 +1,1 @@
-numpy
+git+https://github.com/mike-huls/toolbox#egg=toolbox
