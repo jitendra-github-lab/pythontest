@@ -5,7 +5,12 @@ from pathlib import Path
 with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
-REQUIRED = TextFile(filename=str(Path(__file__).with_name("requirements.txt"))).readlines()
+
+def req_parse(filename: str) -> list[str]:
+    return TextFile(filename=str(Path(__file__).with_name("requirements.txt"))).readlines()
+
+
+REQUIRED = req_parse("requirements.txt")
 
 setuptools.setup(
     name='jeet',
@@ -16,10 +21,10 @@ setuptools.setup(
     long_description=long_description,
     long_description_content_type="text/markdown",
     url='https://github.com/jitendra-github-lab/pythontest',
-    project_urls = {
+    project_urls={
         "Bug Tracker": "https://github.com/jitendra-github-lab/pythontest/issues"
     },
     license='MIT',
     packages=['jeettest'],
-    install_requires=[REQUIRED],
+    install_requires=REQUIRED,
 )
