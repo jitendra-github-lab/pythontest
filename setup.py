@@ -1,7 +1,11 @@
 import setuptools
+from distutils.text_file import TextFile
+from pathlib import Path
 
 with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
+
+REQUIRED = TextFile(filename=str(Path(__file__).with_name("requirements.txt"))).readlines()
 
 setuptools.setup(
     name='jeet',
@@ -17,5 +21,5 @@ setuptools.setup(
     },
     license='MIT',
     packages=['jeettest'],
-    install_requires=['requests'],
+    install_requires=[REQUIRED],
 )
