@@ -14,7 +14,7 @@ def req_parse(filename: str) -> list[str]:
 REQUIRED = req_parse("requirements.txt")
 
 setuptools.setup(
-    name='jeet',
+    name='jeetdemo',
     version='0.0.1',
     author='Jitenra Thakur',
     author_email='jitendra@gmail.com',
