@@ -15,7 +15,7 @@ REQUIRED = req_parse("requirements.txt")
 
 setuptools.setup(
     name='jeetdemo',
-    version='0.0.1',
+    version='1.0.2',
     author='Jitenra Thakur',
     author_email='jitendra@gmail.com',
     description='Testing installation of Package',
