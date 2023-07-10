@@ -1,1 +1,2 @@
 numpy
+toolbox @ git+https://github.com/Muls/toolbox
