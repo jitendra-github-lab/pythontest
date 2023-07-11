@@ -1,2 +1,1 @@
-toolbox @ git+https://github.com/Muls/toolbox@main#egg=toolbox
 numpy
